@@ -6,6 +6,8 @@ namespace RPGConsoleGame
     {
         static void Main(string[] args)
         {
+
+            //test
            
             Console.WriteLine("Type in which class you would like to select: ");
             Console.WriteLine("Warrior\nMage\nRogue\nRanger");
