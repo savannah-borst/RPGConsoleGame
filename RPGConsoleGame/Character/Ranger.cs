@@ -8,11 +8,15 @@ namespace RPGConsoleGame.Character
 {
     internal class Ranger : Character
     {
-        public Ranger(string charName)
+        public Ranger(string name) : base(name, 1, 7, 1) 
         {
-            name = charName;
+            Console.WriteLine("Ranger: {0} has been created. \nYou are level {1}", name, getLevel());
         }
 
-        public string name;
+        public void levelUp()
+        {
+            LevelUp(1, 5, 1);
+        }
+
     }
 }

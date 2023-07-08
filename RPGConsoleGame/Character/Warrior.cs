@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPGConsoleGame.PrimaryAttributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,18 @@ namespace RPGConsoleGame.Character
 {
     internal class Warrior : Character
     {
-        public Warrior(string charName) {
-            name = charName;
+        public Warrior(string name) : base(name, 5, 2, 1) 
+        {
+            Console.WriteLine("Warrior: {0} has been created. \nYou are level {1}", name, getLevel());
         }
 
-        public string name;
+        public void levelUp()
+        {
+            LevelUp(3, 2, 1);
+        }
 
 
-        
-        
+
+
     }
 }

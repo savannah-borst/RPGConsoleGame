@@ -8,11 +8,14 @@ namespace RPGConsoleGame.Character
 {
     internal class Mage : Character
     {
-        public Mage(string charName)
+        public Mage(string name) : base(name, 1, 1, 8) 
         {
-            name = charName;
+            Console.WriteLine("Mage: {0} has been created. \nYou are level {1}", name, getLevel());
+        }
+        public void levelUp()
+        {
+            LevelUp(1, 1, 5);
         }
 
-        public string name;
     }
 }

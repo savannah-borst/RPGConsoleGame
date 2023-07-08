@@ -7,42 +7,47 @@ namespace RPGConsoleGame
         static void Main(string[] args)
         {
 
-            //test
-           
-            Console.WriteLine("Type in which class you would like to select: ");
-            Console.WriteLine("Warrior\nMage\nRogue\nRanger");
+            Console.WriteLine("Type in which class you would like to select: \n");
+            Console.WriteLine("Warrior\nMage\nRogue\nRanger\n");
             string input = Console.ReadLine();
+
+            Warrior warrior;
+            Mage mage;
+            Rogue rogue;
+            Ranger ranger;
 
             if (input == "Warrior")
             {
-                Warrior character = new(Name());
-                Console.WriteLine("Created new Warrior: " + character.name);
-            } else if (input == "Mage")
+                warrior = new(Name());
+
+            } 
+            else if (input == "Mage")
             {
-                Mage character = new(Name());
-                Console.WriteLine("Created new Mage: " + character.name);
-            } else if (input == "Rogue")
+                mage = new(Name());
+            } 
+            else if (input == "Rogue")
             {
-                Rogue character = new(Name());
-                Console.WriteLine("Created new Rogue: " + character.name);
+                rogue = new(Name());
             } else if (input == "Ranger")
             {
-                Ranger character = new(Name());
-                Console.WriteLine("Created new Ranger: " + character.name);
+                ranger = new(Name());
             } else
             {
                 Console.WriteLine("Sorry this was not an option.");
             }
+
+            
             
 
         }
 
         static string Name ()
         {
-            Console.WriteLine("Please enter your character name");
+            Console.WriteLine("Please enter your character name\n");
             string charName = Console.ReadLine();
 
             return charName;
         }
+
     }
 }
