@@ -17,12 +17,12 @@ namespace RPGConsoleGame.Character
         PrimaryAttribute _totalPrimaryAttribute { get; set; }
 
         //Constructer
-        public Character(string name, int strength, int dexterity, int intelligence) 
+        public Character(string name, int str, int dex, int intell) 
         {
             _name = name;    
             _level = 1;
-            _basePrimaryAttribute = new PrimaryAttribute(strength, dexterity, intelligence);
-            _totalPrimaryAttribute = new PrimaryAttribute(strength, dexterity, intelligence);
+            _basePrimaryAttribute = new PrimaryAttribute(str, dex, intell);
+            _totalPrimaryAttribute = new PrimaryAttribute(str, dex, intell);
         }
 
 
